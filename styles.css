@@ -1,0 +1,333 @@
+.blue { background-color: #cbd7f0; }
+.orange { background-color: #f9eada; }
+.green { background-color: #eaf1de; }
+.white { background-color: white; }
+
+.blue, .green, .orange, .white, body {
+    border: 1px solid black;
+}
+
+.content_div { padding: 5px; }
+
+/* ======= Десктопна сітка ======= */
+
+#page {
+    display: grid;
+    grid-template-areas:
+        "block1 block1 block1 block1"
+        "block2 block3 block3 block4"
+        "block5 block3 block3 block4"
+        "block6 block6 block6 block4";
+    grid-template-columns: 16em 1fr 1fr 16em;
+    grid-template-rows: auto 1fr 1fr auto;
+    gap: 2px;
+    min-height: 97vh;
+    min-width: 1250px;
+}
+
+#block1 { grid-area: block1; }
+#block2 { grid-area: block2; }
+#block3 { grid-area: block3; }
+#block4 { grid-area: block4; }
+#block5 { grid-area: block5; }
+#block6 { grid-area: block6; justify-items: right; }
+
+/* ======= Блок 2 (меню + input кольору) ======= */
+
+#block2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+#block2 ul {
+    padding-left: 1em;
+    text-align: left;
+}
+
+#block2 li {
+    margin-bottom: 3vh;
+}
+
+/* input для завдання 4 */
+#colorInput {
+    margin-top: 10px;
+    padding: 5px 8px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 260px;
+    box-sizing: border-box;
+}
+
+/* ======= Блок 5 ======= */
+
+#block5 h2 {
+    text-align: center;      
+    margin-bottom: 0.5em;
+}
+
+#block5 ol {
+    padding-left: 1em;       
+    text-align: left;        
+    list-style-position: inside;
+}
+
+#block5 li {
+    margin-bottom: 2vh;
+}
+
+/* ======= Блок 4 ======= */
+
+#block4 li {
+    margin-bottom: 0.7vh;
+    list-style-position: inside;
+}
+
+/* ======= Блоки 1 і 6 (верх і низ) ======= */
+
+#block1, #block6 {
+    display: flex;
+    align-items: center;   
+    justify-content: space-between; 
+    padding: 1em; 
+}
+
+#block1 h1, #block6 h2, #block6 p {
+    margin: 0; 
+}
+
+/* ======= Загальне ======= */
+
+body {
+    padding: 0;
+    margin: 1vh 1vw;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.teams_image {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+/* білий прямокутник x, y */
+
+#x, #y {
+    padding: 0 1em;
+    margin: 1em;
+    width: fit-content;
+    align-content: center;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#x { justify-self: right; }
+#y { justify-self: left; }
+
+.content_div {
+    padding: 5px;
+}
+
+/* ======= Блок 3 (центральний контент) ======= */
+
+#block3 {
+    padding: 2em;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    font-size: 1.3rem;
+    line-height: 1.35;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 2em 0.5em;
+}
+
+#block3-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;            
+    margin-bottom: 1.7em;
+}
+
+#block3 #logo {
+    height: auto;
+    max-width: 70%;
+}
+
+#block3-title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+#block3 p {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+#block3 ol {
+    padding-left: 1.2em;
+    margin: 0.5em 0;
+}
+
+#block3 li {
+    margin-bottom: 0.6em;
+}
+
+#block3 img#manufactures {
+    display: block;
+    align-self: center;
+    margin-top: auto;   
+    margin-bottom: 0;   
+    width: 550px;
+    height: 95px;
+}
+
+/* блок із формою (завдання 3) всередині block3 */
+
+#task-form-container {
+    margin-top: 20px;
+    border-top: 2px solid #000;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+#maxNumberForm p {
+    margin: 0 0 8px;
+}
+
+#maxNumberForm input[type="number"] {
+    width: 60px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+#maxNumberForm button {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+/* ======= Елементи редагування блоків (завдання 5) ======= */
+
+.block-controls {
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.block-edit-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.block-editor {
+    width: 100%;
+    min-height: 120px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.block-save-btn,
+.block-reset-btn {
+    padding: 4px 10px;
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+
+/* ========================================================= */
+/* ===============   АДАПТИВ ДЛЯ ТЕЛЕФОНІВ   =============== */
+/* ========================================================= */
+
+@media screen and (max-width: 1200px) {
+
+    body {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    /* Замість жорсткої сітки — простий потік блоків один під одним */
+    #page {
+        display: block;
+        min-width: 100%;
+        min-height: unset;
+    }
+
+    /* Верхній і нижній блоки по центру */
+    #block1, #block6 {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Центральний контент крупніший, як на макеті для телефону */
+    #block3 {
+        padding: 1em; 
+        font-size: 2.5rem; 
+        line-height: 1.5;    
+    }
+
+    #block3-header {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    #block3 #logo {
+        max-width: 100%; 
+    }
+
+    /* меню більш щільне */
+    #block2 li {
+        margin-bottom: 1vh;
+    }
+
+    /* картинку-виробників розтягуємо на всю ширину телефону */
+    #manufactures {
+        width: 100% !important;  
+        height: auto !important; 
+    }
+
+    /* input кольору — на всю ширину */
+
+    #colorInput {
+        width: 90%;
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    /* форма з 10 числами — полям не тісно */
+
+    #maxNumberForm input[type="number"] {
+        width: 100%;
+    }
+
+    #maxNumberForm div {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px !important;
+    }
+
+    /* текст у списках у блоках 4 і 5 — по центру, як у прикладі */
+    #block4 ol,
+    #block5 ol {
+        text-align: center;
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+    /* textarea та кнопки редагування блоків — зручніші для пальця */
+
+    .block-editor {
+        min-height: 160px;
+        font-size: 1rem;
+    }
+
+    .block-save-btn,
+    .block-reset-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
